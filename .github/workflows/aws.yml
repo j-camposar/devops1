@@ -28,9 +28,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name : carpeta
-      run: ! 
-        pwd
-        ls
+      run: pwd
+    - name: Listar archivos de la carpeta
+      run: ls -la
 
     # 3️⃣ Construir y subir imagen Docker
     - name: Build and push Docker image
