@@ -13,13 +13,5 @@ jobs:
       - name: Checkout del código
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Instalar dependencias
-        run: npm install
-
       - name: Ejecutar echo
         run: echo "El workflow funciona "
