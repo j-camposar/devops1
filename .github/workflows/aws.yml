@@ -30,7 +30,7 @@ jobs:
     # 3️⃣ Construir y subir imagen Docker
     - name: Build and push Docker image
       run: |
-        docker build -t $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:$IMAGE_TAG .
+        docker build -t $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:$IMAGE_TAG ./devops1
         docker push $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:$IMAGE_TAG
 
     # 4️⃣ Conectarse a EC2 y ejecutar Docker
