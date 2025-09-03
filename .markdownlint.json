@@ -4,5 +4,8 @@
   "MD033": false,  
   "MD041": true,  
   "MD012": true,  
-  "MD029": { "style": "ordered" }
+  "MD029": { "style": "ordered" },
+  "ignore": [
+    "README_SINTAXIS.md"
+  ]
 }
