@@ -1,13 +1,21 @@
  Encabezados (#)
 Se usan para títulos y secciones.
+
 # Título principal (H1)
+
 ## Sección principal (H2)
+
 ### Subsección (H3)
+
 #### Subsubsección (H4)
+
 Ejemplo en README.md:
 # Proyecto Ejemplo
+
 ## Instalación
+
 ## Uso
+
 ## Contribuciones
 ________________________________________
 2️⃣ Énfasis (* o _)
@@ -21,6 +29,7 @@ ________________________________________
 •	Lista no ordenada: - o *
 •	Lista ordenada: 1., 2., 3.
 Ejemplo:
+
 ## Pasos de instalación
 
 1. Clonar el repositorio
@@ -41,6 +50,7 @@ npm install
 ---
 
 ## 5️⃣ Enlaces
+
 - Enlaces a archivos internos o externos: `[texto](ruta)`  
 
 **Ejemplo**:
@@ -71,7 +81,9 @@ ________________________________________
 •	Tres guiones o asteriscos: --- o ***
 Separa secciones visualmente:
 ---
+
 ## Uso
+
 ...
 
 ________________________________________

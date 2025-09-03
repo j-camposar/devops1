@@ -4,6 +4,7 @@
 ## 2️⃣ `CONTRIBUTING.md`  
 
 ```markdown
+
 # Guía de Contribución
 
 ¡Gracias por querer contribuir a este proyecto!  
