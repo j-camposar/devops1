@@ -2,13 +2,13 @@ name: Build, Push Docker and Deploy to EC2
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "deplpoy" ]
 
 env:
-  DOCKERHUB_USERNAME: jocamposar
-  DOCKERHUB_REPO: devops1 
-  EC2_USER: ec2-user
-  EC2_HOST: 3.143.5.14        
+  DOCKERHUB_USERNAME: jocamposar #usuario DockerHub
+  DOCKERHUB_REPO: devops1     #repo DockerHub
+  EC2_USER: ec2-user          #usuario ec2
+  EC2_HOST: 3.143.5.14        #ip publicaEc2    
   IMAGE_TAG: ${{ github.sha }} # Tag único por commit
 
 jobs:
