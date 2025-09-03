@@ -1,6 +1,7 @@
+
 # Guia de usos 
 
- Encabezados (#)
+Encabezados (#)
 Se usan para títulos y secciones.
 
 # Título principal (H1)
@@ -12,11 +13,12 @@ Se usan para títulos y secciones.
 #### Subsubsección (H4)
 
 Ejemplo en README.md:
+
 # Proyecto Ejemplo
 
 ## Instalación
 
-## Uso
+## Uso casos
 
 ## Contribuciones
 ________________________________________
@@ -84,7 +86,7 @@ ________________________________________
 Separa secciones visualmente:
 ---
 
-## Uso
+## Uso ejemplo
 
 ...
 
