@@ -7,9 +7,6 @@ on:
 env:
   DOCKERHUB_USERNAME: jocamposar #usuario DockerHub
   DOCKERHUB_REPO: devops1     #repo DockerHub
-  EC2_USER: ec2-user          #usuario ec2
-  EC2_HOST: 3.143.5.14        #ip publicaEc2    
-  IMAGE_TAG: ${{ github.sha }} # Tag único por commit
 
 jobs:
   build-and-deploy:
@@ -27,28 +24,9 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name : carpeta
-      run: pwd
-    - name: Listar archivos de la carpeta
-      run: ls -la
 
     # 3️⃣ Construir y subir imagen Docker
     - name: Build and push Docker image
       run: |
-        docker build -t $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:$IMAGE_TAG .
-        docker push $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:$IMAGE_TAG
-
-    # 4️⃣ Conectarse a EC2 y ejecutar Docker
-    - name: Deploy to EC2
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H $EC2_HOST >> ~/.ssh/known_hosts
-
-        ssh $EC2_USER@$EC2_HOST "\
-          docker pull $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:$IMAGE_TAG && \
-          docker stop mi-app || true && \
-          docker rm mi-app || true && \
-          docker run -d --name mi-app -p 80:80 $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:$IMAGE_TAG \
-        "
+        docker build -t $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:latest .
+        docker push $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:latest
