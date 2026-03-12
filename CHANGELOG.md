@@ -14,3 +14,4 @@ Todos los cambios importantes se documentan aquí.
 
 - Versión inicial del proyecto.
 - Funcionalidad de registro y login.
+
